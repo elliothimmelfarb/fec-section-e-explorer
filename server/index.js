@@ -4,7 +4,7 @@ import { ENV } from './config/appConfig';
 // import { connect } from './db';
 // import passportConfig from './config/passport';
 import expressConfig from './config/express';
-// import routesConfig from './config/routes';
+import routesConfig from './config/routes';
 const App = require('../public/assets/server');
 const app = express();
 
@@ -42,7 +42,7 @@ expressConfig(app);
  *
  * Note: Some of these routes have passport and database model dependencies
  */
-// routesConfig(app);
+routesConfig(app);
 
 import api from './api/index';
 
