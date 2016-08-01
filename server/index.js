@@ -1,8 +1,8 @@
 import express from 'express';
 import webpack from 'webpack';
 import { ENV } from './config/appConfig';
-// import { connect } from './db';
-// import passportConfig from './config/passport';
+import { connect } from './db';
+import passportConfig from './config/passport';
 import expressConfig from './config/express';
 import routesConfig from './config/routes';
 const App = require('../public/assets/server');
@@ -13,12 +13,12 @@ const app = express();
  * - connect to MongoDB using mongoose
  * - register mongoose Schema
  */
-// connect();
+connect();
 
 /*
  * REMOVE if you do not need passport configuration
  */
-// passportConfig();
+passportConfig();
 
 import webpackDevConfig from '../webpack/webpack.config.dev-server';
 
