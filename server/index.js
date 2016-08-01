@@ -20,7 +20,7 @@ const app = express();
  */
 // passportConfig();
 
-import webpackDevConfig from '../webpack/webpack.config.dev-client';
+import webpackDevConfig from '../webpack/webpack.config.dev-server';
 
 if (ENV === 'development') {
   const compiler = webpack(require('../webpack/webpack.config.dev-client'));
